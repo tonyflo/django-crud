@@ -1,5 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Hello, world!</h1>
+<table>
+<tr><th>Name</th><th>Score</td></tr>
+{% for score in scores %}
+  <tr>
+    <td>{{ score.name }}</td>
+    <td>{{ score.value }}</td>
+  </tr>
+{% endfor %}
+</table>
 <a href="{% url 'about' %}">About page</a>
 {% endblock %}
